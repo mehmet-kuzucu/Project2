@@ -35,7 +35,7 @@ struct Pair login (struct Voter voter_array[]){
 
 int ask_vote (struct Voter voter_array[]) {
 
-    // first check is user voted already, if voted return 0
+    // first check is user voted already, if voted return 0. You can do this by looking vote and if it is "-" this means it is not voted yet. 
 
     // asking "yes" or "no" and add that answer to correct votes index
 
@@ -70,25 +70,27 @@ int main(void){
     struct Voter voter_array[] = {user1, user2, user3, user4};
 
     struct Pair p; 
+    
+
     // main loop
+    int i = 0;
+    while (i < 4) {
 
-    while (true) {
-
-        printf("%s \n\n", "PROGRAM STARTED");
+        printf("%s \n\n", "*PROGRAM STARTED*");
 
         
 
         //asking username and password to login
         p = login(voter_array);
-        if (is_exits == 0){
-            //login is not correct
+        if (p.is_exits == 0){
+            //login is not correct, go to next user
         }
 
 
-        printf("%s \n", "IF YOU WANT TO VOTE ANYTHING ");
+        printf("%s \n", "IF YOU WANT TO VOTE PRESS ANYTHING ");
         printf("%s \n", "IF YOU WANT TO LEAVE PRESS 2");    
         
-        scanf("%d", cont);
+        scanf("%d", &cont);
         switch (cont){
             
             case 2:
@@ -99,8 +101,12 @@ int main(void){
         
 
         // asking the users vote
-        ask_voted = ask_vote(voter_array);
-        
+        is_voted = ask_vote(voter_array);
+        if (!is_voted) {
+            // user already voted, pass this user 
+            continue;
+        }
+        i++;// for while loop
 
 
         //checking majority
