@@ -83,7 +83,7 @@ int ask_vote (struct Voter voter_array[], int user_index) {
     }
 
     // asking "yes" or "no" and add that answer to correct votes index
-    printf("%s \n", "PLEASE TYPE, 'yes' or 'no'  :");
+    printf("%s \n", "PLEASE VOTE, 'yes' or 'no'  :");
     char vote[10];
     scanf("%s", vote);
 
@@ -125,8 +125,43 @@ int  checking_majority (struct Voter voter_array[]) {
     
     //there is no mojority
     return 0;
+}
+
+
+// LEVEL 2
+
+// 3-) updating level 1.1, adding abstain format
+
+
+// 4-) changing user password 
+
+void changing_password (struct Voter voter_array[]) {
+    // kadija
 
 }
+
+
+// 5-) changing votes
+
+void changing_vote (struct Voter voter_array[]) {
+    //eray
+    
+}
+
+
+// 6-) writing data to file 
+
+void writing_data () {
+    //dilara and mehmet
+
+}
+
+
+
+
+
+
+
 
 
 int main(void){
@@ -142,6 +177,8 @@ int main(void){
     struct Voter user4 = {"user4", "password4", "-"}; 
 
     struct Voter voter_array[] = {user1, user2, user3, user4};
+
+
 
     struct Pair pair; 
     
