@@ -133,12 +133,91 @@ int  checking_majority (struct Voter voter_array[]) {
 // 3-) updating level 1.1, adding abstain format
 
 
-// 4-) changing user password 
+// 4-) changing user password, kadija
 
-void changing_password (struct Voter voter_array[]) {
-    // kadija
+void enterpassword();
+void changePassword();
 
+int password1= 2021;
+int password2= 2022;
+int password3= 2023;
+int password4= 2024;
+
+int main(void)
+{
+enterpassword();
 }
+// fist the users must enter with thier previous passwords
+
+void enterpassword()
+{
+    int user1;
+    int user2;
+    int user3;
+    int user4;
+    printf("What is the password1?: ");
+    scanf("%d", &user1);
+    printf("What is the password2?: ");
+    scanf("%d", &user2);
+    printf("What is the password3?: ");
+    scanf("%d", &user3);
+    printf("What is the password4?: ");
+    scanf("%d", &user4);
+    
+    while(1)
+    {
+    if (user1,user2,user3,user4 == password1,password2,password3,password4)
+        {
+        printf("\nAcces granted\n");
+        changePassword();
+        break;
+        }
+    else
+        {
+      // they need to use the correct password mention or access will be denied
+      
+        printf("\nAcces denied\n");
+        printf("What is the password?:");
+        scanf("%d", &user1);
+        printf("What is the password?:");
+        scanf("%d", &user2);
+        printf("What is the password?:");
+        scanf("%d", &user3);
+        printf("What is the password?:");
+        scanf("%d", &user4);
+        }
+    }
+}
+// one correct password entered users can change password 
+void changePassword() 
+{
+    int newpassword1;
+    int newpassword2;
+    int newpassword3;
+    int newpassword4;
+    printf("\nEnter new newpassword1: ");
+    scanf("%d", &newpassword1);
+    printf("\nEnter new password2: ");
+    scanf("%d", &newpassword2);
+    printf("\nEnter new password3: ");
+    scanf("%d", &newpassword3);
+    printf("\nEnter new password4: ");
+    scanf("%d", &newpassword4);
+  
+  // once new password is entered its now set as the official password 
+    
+    password1= newpassword1;
+    printf("\nThe new password is: %d\n", password1);
+    password2= newpassword2;
+    printf("\nThe new password is: %d\n", password2);
+    password3= newpassword3;
+    printf("\nThe new password is: %d\n", password3);
+    password4= newpassword4;
+    printf("\nThe new password is: %d\n", password4);
+    
+   printf("%s \n\n", "PASSWORD CHANGED!!");  
+
+    }
 
 
 // 5-) changing votes
@@ -148,10 +227,10 @@ int changing_vote(struct Voter voter_array[]) {
     if (strcmp(voter_array[].vote, "-")) {
         //user already voted
         printf("%s \n\n", "YOU ARE ALREADY VOTED");
-        printf("%s \n\n", "›F YOU WANT TO CONT›NUE, PLEASE PRESS ANYTH›NG EXCEPT FOR 4 ");
+        printf("%s \n\n", "√ùF YOU WANT TO CONT√ùNUE, PLEASE PRESS ANYTH√ùNG EXCEPT FOR 4 ");
     }
     else {
-        printf("%s \n\n", "›F YOU WANT TO CHANGE YOUR VOTE, PLEASE PRESS 4");
+        printf("%s \n\n", "√ùF YOU WANT TO CHANGE YOUR VOTE, PLEASE PRESS 4");
 
         int i;
         int yes;
