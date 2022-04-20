@@ -154,10 +154,8 @@ void changing_vote (struct Voter voter_array[]) {
 void writing_data () {
     //dilara and mehmet
 
+  
 }
-
-
-
 
 
 
