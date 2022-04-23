@@ -133,13 +133,13 @@ int  checking_majority (struct Voter voter_array[]) {
 // 3-) updating level 1.1, adding abstain format
 
 
-// 4-) changing user password 
+// 4-) changing user password // kadija
 
-void changing_password (struct Voter voter_array[]) {
-    // kadija
-
+void changing_password (struct Voter voter_arry[]) {
+  
+  
 }
-
+   
 
 // 5-) changing votes
 
@@ -154,10 +154,8 @@ void changing_vote (struct Voter voter_array[]) {
 void writing_data () {
     //dilara and mehmet
 
+  
 }
-
-
-
 
 
 
